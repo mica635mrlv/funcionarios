@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    background-color: rgb(236, 236, 236);
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.container {
+    width: 200px;
+    height: 170px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    box-shadow: 4px 4px 4px rgb(206, 206, 206);
+    border-radius: 10px;
+}
+
+.container img {
+    width: 70px;
+    height: 100px;
+    border-radius: 90%;
+    max-width: 100%;
+}
+
+.container span {
+    
+}
+
