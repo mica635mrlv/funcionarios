@@ -1,49 +1,27 @@
-'use stript'
+'use strict'
 
-// // import funcionarios from "./funcionarios.json" with {type: "json"}
+import funcionarios from "./funcionarios.json" with {type: "json"}
 
-// // console.log (funcionarios)
+console.log (funcionarios.cargo)
 
-// const funcionarios = [
-//     {
-//         url: './img/ana.jpg',
-//         nome: 'Maria Souza',
-//         cargo: 'Designer'
-//     },
-//     {
-//         imagem: './img/joao.jpg',
-//         nome: 'João Silva',
-//         cargo: 'DBA'
-//     },
-//     {
-//         imagem: './img/hugo.jpg',
-//         nome: 'Hugo Pereira',
-//         cargo: 'FrontEnd'
-//     },
-//     {
-//         imagem: './img/ana.jpg',
-//         nome: 'Ana Maria',
-//         cargo: 'BackEnd'
-//     }
-// ]
+function criarPerfil (funcionario) {
+    const body = document.querySelector('body')
 
-// function criarPerfil (srcImagem) {
-//     const container = document.getElementById(container)
-//     const imagem = document.getElementById('img')
-//     const nome = document.getElementById('span')
-//     const cargo = document.getElementById('p')
+    const container = document.createElement('div')
+    container.className = 'container'
 
-//     imagem.src = srcImagem.url
-//     nome.textContent = srcImagem.nome
-//     cargo.textContent = srcImagem.cargo
+    const imagem = document.createElement('img')
+    const nome = document.createElement('span')
+    const cargo = document.createElement('p')
 
-//     container.appendChild(imagem)
-//     container.appendChild(nome)
-//     container.appendChild(cargo)
-// }
+    imagem.src = `./img/${funcionario.imagem}`
+    nome.textContent = funcionario.nome
+    cargo.textContent = funcionario.cargo
 
-// function carregarPerfis() {
-//     funcionarios.forEach(criarPerfil)
-// }
+    body.appendChild(container)
+    container.appendChild(imagem)
+    container.appendChild(nome)
+    container.appendChild(cargo)
+}
 
-// carregarPerfis()
+funcionarios.forEach(criarPerfil)

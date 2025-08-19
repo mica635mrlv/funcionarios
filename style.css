@@ -15,7 +15,7 @@ body {
 
 .container {
     width: 200px;
-    height: 170px;
+    height: 180px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -23,6 +23,7 @@ body {
     background-color: white;
     box-shadow: 4px 4px 4px rgb(206, 206, 206);
     border-radius: 10px;
+    gap: 3px;;
 }
 
 .container img {
@@ -33,6 +34,12 @@ body {
 }
 
 .container span {
-    
+    font-family: "Inter", sans-serif;
+    font-weight: bold;
+    font-size: 20px;
 }
 
+.container p {
+    font-family: "Inter", sans-serif;
+    font-size: 15px;
+}
